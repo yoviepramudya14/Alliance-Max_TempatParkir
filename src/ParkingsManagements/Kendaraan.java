@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Kendaraan {
+
+    //constructornya
   
     private String platno, name;
     private int jumlahRoda;
@@ -39,7 +41,5 @@ public class Kendaraan {
         return nama;
     }
 }
-
-//aku tambah komen disini ya buat tes berfungsi ga githubnya -ulfia
     
 
