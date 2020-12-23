@@ -39,5 +39,7 @@ public class Kendaraan {
         return nama;
     }
 }
+
+//aku tambah komen disini ya buat tes berfungsi ga githubnya -ulfia
     
 
