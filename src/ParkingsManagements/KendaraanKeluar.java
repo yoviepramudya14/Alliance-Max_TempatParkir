@@ -47,8 +47,8 @@ public class KendaraanKeluar extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        cetakbutton = new javax.swing.JButton();
+        exitbutton = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,19 +94,19 @@ public class KendaraanKeluar extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
-        jButton2.setText("Cetak Struk");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        cetakbutton.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
+        cetakbutton.setText("Cetak Struk");
+        cetakbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                cetakbuttonActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
-        jButton3.setText("Exit");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        exitbutton.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
+        exitbutton.setText("Exit");
+        exitbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                exitbuttonActionPerformed(evt);
             }
         });
 
@@ -146,9 +146,9 @@ public class KendaraanKeluar extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jButton4)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cetakbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -184,8 +184,7 @@ public class KendaraanKeluar extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(7, 7, 7)
-                        .addComponent(jButton1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -210,9 +209,9 @@ public class KendaraanKeluar extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton4)
-                            .addComponent(jButton2)
-                            .addComponent(jButton3))
-                        .addContainerGap(50, Short.MAX_VALUE))))
+                            .addComponent(cetakbutton)
+                            .addComponent(exitbutton))))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -235,13 +234,13 @@ public class KendaraanKeluar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void cetakbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cetakbuttonActionPerformed
         // TODO add your handling code here:
-        Home hm = new Home();
-        hm.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        TiketKeluar sm = new TiketKeluar();
+        sm.setVisible(true);
+    }//GEN-LAST:event_cetakbuttonActionPerformed
     private JFrame frame;
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void exitbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitbuttonActionPerformed
         // TODO add your handling code here:
         frame = new JFrame ("Exit");
        if (JOptionPane.YES_NO_OPTION!= JOptionPane.showConfirmDialog(frame,"Anda ingin keluar","parking area management",
@@ -249,12 +248,12 @@ public class KendaraanKeluar extends javax.swing.JFrame {
        } else {
            System.exit(0);
        }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_exitbuttonActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        TiketKeluar sm = new TiketKeluar();
-        sm.setVisible(true);
+        Home hm = new Home();
+        hm.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -297,9 +296,9 @@ public class KendaraanKeluar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cetakbutton;
+    private javax.swing.JButton exitbutton;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
