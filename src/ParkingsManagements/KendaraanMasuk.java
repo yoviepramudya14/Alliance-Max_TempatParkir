@@ -4,19 +4,23 @@
  * and open the template in the editor.
  */
 package ParkingsManagements;
-import java.awt.Component;
 import java.awt.HeadlessException;
-import java.sql.Connection;
 import java.sql.SQLException;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
 /**
  *
  * @author ASUS
  */
 public class KendaraanMasuk extends javax.swing.JFrame {
+    java.sql.Connection conn = null;
+    ResultSet rs = null;
+    Statement str;
+    
     private void kosongkan_form(){
         txtTiket.setEditable(true);
         txtTiket.setText(null);
@@ -35,15 +39,10 @@ public class KendaraanMasuk extends javax.swing.JFrame {
         model.addColumn("Jam Masuk");
         
         try{
-           //int no = 1;
-           //conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","ulfia","1234");
-           //st = (Statement)conn.createStatement();
-            //ResultSet rs = st.executeQuery("select * from dataparkir");
-            String sql = "SELECT * FROM dataparkir";
-            java.sql.Connection conn = (Connection)Konfigurasi.configDB();
-            java.sql.Statement stm = conn.createStatement();
-            java.sql.ResultSet rs = stm.executeQuery(sql);
-           
+           conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","parkir","1234"); //parkir sebagai database dan 1234 adalah paswordnya
+           str = (Statement)conn.createStatement();
+           rs = str.executeQuery("select * from data");
+
            while(rs.next()){
                model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5)});     
             
@@ -55,11 +54,8 @@ public class KendaraanMasuk extends javax.swing.JFrame {
         }
     }
 
-
-    /**
-     * Creates new form KendaraanMasuk
-     */
     public KendaraanMasuk() {
+        this.rs = null;
         initComponents();
         tampilkan_data();
         kosongkan_form();
@@ -312,13 +308,14 @@ public class KendaraanMasuk extends javax.swing.JFrame {
     private void tbSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbSimpanActionPerformed
         // TODO add your handling code here:
         try{
-           String sql = "INSERT INTO dataparkir VALUES ('"+txtTiket.getText()+"','"+txtPlat.getText()+"','"+cbJenis.getSelectedItem()+"','"+txtTanggal.getText()+"','"+txtJam.getText()+"')";
-           java.sql.Connection conn = (Connection)Konfigurasi.configDB();
-           java.sql.PreparedStatement pstm = conn.prepareStatement(sql);
+           conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","parkir","1234");
+           str = (Statement)conn.createStatement();
+           java.sql.PreparedStatement pstm = conn.prepareStatement("INSERT INTO data VALUES ('"+txtTiket.getText()+"','"+txtPlat.getText()+"','"+cbJenis.getSelectedItem()+"','"+txtTanggal.getText()+"','"+txtJam.getText()+"')");
            pstm.execute();
            JOptionPane.showMessageDialog(null, "Proses Simpan Data Berhasil");
            tampilkan_data();
            kosongkan_form();
+        
         }catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
@@ -361,9 +358,9 @@ public class KendaraanMasuk extends javax.swing.JFrame {
     private void tbEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbEditActionPerformed
         // TODO add your handling code here:
         try{
-            String sql = "UPDATE dataparkir SET no_tiket='"+txtTiket.getText()+"',no_plat='"+txtPlat.getText()+"',jenis='"+cbJenis.getSelectedItem()+"',tgl_masuk='"+txtTanggal.getText()+"',jam_masuk='"+txtJam.getText()+"' WHERE no_tiket= '"+txtTiket.getText()+"'";
-            java.sql.Connection conn = (Connection)Konfigurasi.configDB();
-            java.sql.PreparedStatement pstm = conn.prepareStatement(sql);
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","parkir","1234");
+            str = (Statement)conn.createStatement();
+            java.sql.PreparedStatement pstm = conn.prepareStatement("UPDATE data SET no_tiket='"+txtTiket.getText()+"',no_plat='"+txtPlat.getText()+"',jenis='"+cbJenis.getSelectedItem()+"',tgl_masuk='"+txtTanggal.getText()+"',jam_masuk='"+txtJam.getText()+"' WHERE no_tiket= '"+txtTiket.getText()+"'");
             pstm.execute();
             JOptionPane.showMessageDialog(null, "Edit Data Berhasil");
             
