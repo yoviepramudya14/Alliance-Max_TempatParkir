@@ -39,7 +39,7 @@ public class KendaraanMasuk extends javax.swing.JFrame {
         model.addColumn("Jam Masuk");
         
         try{
-           conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","parkir","1234"); //parkir sebagai database dan 1234 adalah paswordnya
+           conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","ulfia","1234"); //parkir sebagai database dan 1234 adalah paswordnya
            str = (Statement)conn.createStatement();
            rs = str.executeQuery("select * from data");
 
@@ -308,7 +308,7 @@ public class KendaraanMasuk extends javax.swing.JFrame {
     private void tbSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbSimpanActionPerformed
         // TODO add your handling code here:
         try{
-           conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","parkir","1234");
+           conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","ulfia","1234");
            str = (Statement)conn.createStatement();
            java.sql.PreparedStatement pstm = conn.prepareStatement("INSERT INTO data VALUES ('"+txtTiket.getText()+"','"+txtPlat.getText()+"','"+cbJenis.getSelectedItem()+"','"+txtTanggal.getText()+"','"+txtJam.getText()+"')");
            pstm.execute();
@@ -358,7 +358,7 @@ public class KendaraanMasuk extends javax.swing.JFrame {
     private void tbEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbEditActionPerformed
         // TODO add your handling code here:
         try{
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","parkir","1234");
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","ulfia","1234");
             str = (Statement)conn.createStatement();
             java.sql.PreparedStatement pstm = conn.prepareStatement("UPDATE data SET no_tiket='"+txtTiket.getText()+"',no_plat='"+txtPlat.getText()+"',jenis='"+cbJenis.getSelectedItem()+"',tgl_masuk='"+txtTanggal.getText()+"',jam_masuk='"+txtJam.getText()+"' WHERE no_tiket= '"+txtTiket.getText()+"'");
             pstm.execute();
