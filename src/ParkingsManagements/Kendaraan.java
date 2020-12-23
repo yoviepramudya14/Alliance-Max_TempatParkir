@@ -4,8 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Kendaraan {
-
-    //constructornya
   
     private String platno, name;
     private int jumlahRoda;
@@ -24,8 +22,15 @@ public class Kendaraan {
     public String getTime(){
       Date HariSekarang = new Date();
       SimpleDateFormat ft = 
-      new SimpleDateFormat ("E yyyy.MM.dd 'pada' hh:mm:ss a zzz");
+      new SimpleDateFormat ("hh:mm:ss a zzz");
       return  ft.format(HariSekarang);
+    }
+    
+    public String getdate(){
+      Date date = new Date();
+      SimpleDateFormat ft = 
+      new SimpleDateFormat ("E yyyy.MM.dd");
+      return ft.format(date);
     }
     
     public double getHarga(){
