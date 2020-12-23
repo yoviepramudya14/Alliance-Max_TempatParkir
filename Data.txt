@@ -1,9 +1,9 @@
-Create table dataparkir
+Create table data
 (
 no_tiket int(4),
-no_plat varchar(10),
-jenis varchar(15),
-tgl_masuk date,
-jam_masuk time,
+no_plat varchar2(20),
+jenis varchar2(15),
+tgl_masuk varchar2(15),
+jam_masuk varchar2(15),
 primary key (no_tiket)
 );
