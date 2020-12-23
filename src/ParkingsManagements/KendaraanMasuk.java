@@ -46,12 +46,12 @@ public class KendaraanMasuk extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        cetakbutton = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        exitbutton = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -110,10 +110,10 @@ public class KendaraanMasuk extends javax.swing.JFrame {
 
         jButton4.setText("Hapus");
 
-        jButton3.setText("Cetak struk");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        cetakbutton.setText("Cetak struk");
+        cetakbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                cetakbuttonActionPerformed(evt);
             }
         });
 
@@ -144,10 +144,10 @@ public class KendaraanMasuk extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Exit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        exitbutton.setText("Exit");
+        exitbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                exitbuttonActionPerformed(evt);
             }
         });
 
@@ -172,13 +172,13 @@ public class KendaraanMasuk extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(87, 87, 87)
-                        .addComponent(jButton3)
+                        .addComponent(cetakbutton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -223,14 +223,14 @@ public class KendaraanMasuk extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
-                    .addComponent(jButton3)
+                    .addComponent(cetakbutton)
                     .addComponent(jButton4))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5)
-                    .addComponent(jButton1))
+                    .addComponent(exitbutton))
                 .addContainerGap())
         );
 
@@ -252,13 +252,13 @@ public class KendaraanMasuk extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void cetakbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cetakbuttonActionPerformed
         // TODO add your handling code here:
-       this.setVisible(false);
-       new Home().setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+       TiketMasuk tm = new TiketMasuk();
+       tm.setVisible(true);
+    }//GEN-LAST:event_cetakbuttonActionPerformed
     private JFrame frame;
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void exitbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitbuttonActionPerformed
         // TODO add your handling code here:
         frame = new JFrame ("Exit");
        if (JOptionPane.YES_NO_OPTION!= JOptionPane.showConfirmDialog(frame,"Anda ingin keluar?","parking area management",
@@ -266,7 +266,7 @@ public class KendaraanMasuk extends javax.swing.JFrame {
        } else {
            System.exit(0);
        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_exitbuttonActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -322,9 +322,9 @@ public class KendaraanMasuk extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton cetakbutton;
+    private javax.swing.JButton exitbutton;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
