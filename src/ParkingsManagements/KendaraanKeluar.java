@@ -32,24 +32,24 @@ public class KendaraanKeluar extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        LabelNoTik = new javax.swing.JLabel();
+        TxtFieldNoTiket = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        txtFieldPlat = new javax.swing.JTextField();
+        cariButton = new javax.swing.JButton();
+        LabelJenis = new javax.swing.JLabel();
+        LabelJamMasuk = new javax.swing.JLabel();
+        TxtFieldJamMasuk = new javax.swing.JTextField();
+        LabelJamKeluar = new javax.swing.JLabel();
+        TxtFieldJamKeluar = new javax.swing.JTextField();
+        LabelDurasi = new javax.swing.JLabel();
+        TxtFieldDurasi = new javax.swing.JTextField();
+        LabelTarif = new javax.swing.JLabel();
+        TxtFieldTarif = new javax.swing.JTextField();
+        ButtonMenu = new javax.swing.JButton();
         cetakbutton = new javax.swing.JButton();
         exitbutton = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        JenisTK = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,39 +58,39 @@ public class KendaraanKeluar extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
         jLabel1.setText("Kendaraan Keluar");
 
-        jLabel2.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
-        jLabel2.setText("No.Tiket");
+        LabelNoTik.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
+        LabelNoTik.setText("No.Tiket");
 
         jLabel3.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
         jLabel3.setText("Plat");
 
-        jButton1.setText("Cari");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        cariButton.setText("Cari");
+        cariButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cariButtonActionPerformed(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
-        jLabel4.setText("Jenis ");
+        LabelJenis.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
+        LabelJenis.setText("Jenis ");
 
-        jLabel5.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
-        jLabel5.setText("Jam Masuk");
+        LabelJamMasuk.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
+        LabelJamMasuk.setText("Jam Masuk");
 
-        jLabel6.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
-        jLabel6.setText("Jam Keluar");
+        LabelJamKeluar.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
+        LabelJamKeluar.setText("Jam Keluar");
 
-        jLabel7.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
-        jLabel7.setText("Durasi");
+        LabelDurasi.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
+        LabelDurasi.setText("Durasi");
 
-        jLabel8.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
-        jLabel8.setText("Tarif");
+        LabelTarif.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
+        LabelTarif.setText("Tarif");
 
-        jButton4.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
-        jButton4.setText("Kembali ke Menu");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        ButtonMenu.setFont(new java.awt.Font("Rockwell", 0, 11)); // NOI18N
+        ButtonMenu.setText("Kembali ke Menu");
+        ButtonMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                ButtonMenuActionPerformed(evt);
             }
         });
 
@@ -110,10 +110,10 @@ public class KendaraanKeluar extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilihan...", "Roda 2", "Roda 4", "Roda > 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        JenisTK.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilihan...", "Roda 2", "Roda 4", "Roda > 4" }));
+        JenisTK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                JenisTKActionPerformed(evt);
             }
         });
 
@@ -127,29 +127,29 @@ public class KendaraanKeluar extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(LabelJamMasuk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(132, 132, 132))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(LabelJenis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(275, 275, 275))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(LabelDurasi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(LabelJamKeluar, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(LabelTarif, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(204, 204, 204))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cariButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jButton4)
+                                    .addComponent(ButtonMenu)
                                     .addGap(18, 18, 18)
                                     .addComponent(cetakbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(exitbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabelNoTik, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -157,13 +157,13 @@ public class KendaraanKeluar extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(176, 176, 176)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(TxtFieldNoTiket, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(txtFieldPlat, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(TxtFieldJamKeluar, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(TxtFieldDurasi, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(TxtFieldTarif, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(TxtFieldJamMasuk, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                            .addComponent(JenisTK, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(134, 134, 134)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -175,40 +175,40 @@ public class KendaraanKeluar extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LabelNoTik)
+                    .addComponent(TxtFieldNoTiket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFieldPlat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(7, 7, 7)
-                        .addComponent(jButton1))
+                        .addComponent(cariButton))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LabelJenis)
+                            .addComponent(JenisTK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LabelJamMasuk)
+                            .addComponent(TxtFieldJamMasuk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LabelJamKeluar)
+                            .addComponent(TxtFieldJamKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LabelDurasi)
+                            .addComponent(TxtFieldDurasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(9, 9, 9)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(LabelTarif)
+                            .addComponent(TxtFieldTarif, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4)
+                            .addComponent(ButtonMenu)
                             .addComponent(cetakbutton)
                             .addComponent(exitbutton))))
                 .addContainerGap(50, Short.MAX_VALUE))
@@ -230,9 +230,9 @@ public class KendaraanKeluar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void cariButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_cariButtonActionPerformed
 
     private void cetakbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cetakbuttonActionPerformed
         // TODO add your handling code here:
@@ -250,15 +250,15 @@ public class KendaraanKeluar extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_exitbuttonActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void ButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonMenuActionPerformed
         // TODO add your handling code here:
         Home hm = new Home();
         hm.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_ButtonMenuActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void JenisTKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JenisTKActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_JenisTKActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,25 +296,25 @@ public class KendaraanKeluar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonMenu;
+    private javax.swing.JComboBox<String> JenisTK;
+    private javax.swing.JLabel LabelDurasi;
+    private javax.swing.JLabel LabelJamKeluar;
+    private javax.swing.JLabel LabelJamMasuk;
+    private javax.swing.JLabel LabelJenis;
+    private javax.swing.JLabel LabelNoTik;
+    private javax.swing.JLabel LabelTarif;
+    private javax.swing.JTextField TxtFieldDurasi;
+    private javax.swing.JTextField TxtFieldJamKeluar;
+    private javax.swing.JTextField TxtFieldJamMasuk;
+    private javax.swing.JTextField TxtFieldNoTiket;
+    private javax.swing.JTextField TxtFieldTarif;
+    private javax.swing.JButton cariButton;
     private javax.swing.JButton cetakbutton;
     private javax.swing.JButton exitbutton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField txtFieldPlat;
     // End of variables declaration//GEN-END:variables
 }
