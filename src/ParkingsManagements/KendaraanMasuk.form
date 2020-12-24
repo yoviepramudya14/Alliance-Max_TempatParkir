@@ -79,12 +79,12 @@
                           <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel6" min="-2" pref="86" max="-2" attributes="0"/>
+                          <Component id="LabelJamMasuk" min="-2" pref="86" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="txtJam" min="-2" pref="181" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel5" min="-2" pref="86" max="-2" attributes="0"/>
+                          <Component id="LabelTanggal" min="-2" pref="86" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="txtTanggal" min="-2" pref="181" max="-2" attributes="0"/>
                       </Group>
@@ -99,15 +99,15 @@
                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButton5" min="-2" pref="141" max="-2" attributes="0"/>
+                          <Component id="MenuButton" min="-2" pref="141" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="exitbutton" min="-2" pref="141" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel2" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="LabelNoTik" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="LabelPlat" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="LabelJenis" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="185" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -133,27 +133,27 @@
                   <Component id="jLabel1" min="-2" pref="31" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="LabelNoTik" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtTiket" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel3" alignment="3" max="32767" attributes="0"/>
+                      <Component id="LabelPlat" alignment="3" max="32767" attributes="0"/>
                       <Component id="txtPlat" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel4" alignment="3" max="32767" attributes="0"/>
+                      <Component id="LabelJenis" alignment="3" max="32767" attributes="0"/>
                       <Component id="cbJenis" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="LabelTanggal" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtTanggal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="LabelJamMasuk" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtJam" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -167,7 +167,7 @@
                   <Component id="jScrollPane2" min="-2" pref="90" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="MenuButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="exitbutton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -184,7 +184,7 @@
             <Property name="text" type="java.lang.String" value="Kendaraan Masuk"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="LabelNoTik">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Rockwell" size="11" style="0"/>
@@ -192,7 +192,7 @@
             <Property name="text" type="java.lang.String" value="No.Tiket"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="LabelPlat">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Rockwell" size="11" style="0"/>
@@ -200,7 +200,7 @@
             <Property name="text" type="java.lang.String" value="Plat"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="LabelJenis">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Rockwell" size="11" style="0"/>
@@ -208,7 +208,7 @@
             <Property name="text" type="java.lang.String" value="Jenis"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="LabelTanggal">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Rockwell" size="11" style="0"/>
@@ -216,7 +216,7 @@
             <Property name="text" type="java.lang.String" value="Tanggal Masuk"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="LabelJamMasuk">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Rockwell" size="11" style="0"/>
@@ -301,12 +301,12 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="MenuButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Kembali ke Menu"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="exitbutton">
