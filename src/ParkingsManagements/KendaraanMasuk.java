@@ -12,6 +12,8 @@ import javax.swing.table.DefaultTableModel;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 /**
  *
  * @author ASUS
@@ -20,6 +22,18 @@ public class KendaraanMasuk extends javax.swing.JFrame {
     java.sql.Connection conn = null;
     ResultSet rs = null;
     Statement str;
+    
+    public void tanggal(){
+        Date tgl = new Date();
+        SimpleDateFormat s = new SimpleDateFormat("E yyyy.MM.dd");
+        txtTanggal.setText(s.format(tgl));
+    }
+    
+    public void time(){
+        Date jam = new Date();
+        SimpleDateFormat a = new SimpleDateFormat("hh:mm:ss a");
+        txtJam.setText(a.format(jam));
+    }
     
     private void kosongkan_form(){
         txtTiket.setEditable(true);
@@ -39,7 +53,7 @@ public class KendaraanMasuk extends javax.swing.JFrame {
         model.addColumn("Jam Masuk");
         
         try{
-           conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","parkir","1234"); //parkir sebagai database dan 1234 adalah paswordnya
+           conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","Nailul","1234"); //parkir sebagai database dan 1234 adalah paswordnya
            str = (Statement)conn.createStatement();
            rs = str.executeQuery("select * from data");
 
@@ -59,6 +73,8 @@ public class KendaraanMasuk extends javax.swing.JFrame {
         initComponents();
         tampilkan_data();
         kosongkan_form();
+        tanggal();
+        time();
     }
 
     /**
@@ -143,6 +159,11 @@ public class KendaraanMasuk extends javax.swing.JFrame {
             }
         });
 
+        txtTanggal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtTanggal.setEnabled(false);
+
+        txtJam.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtJam.setEnabled(false);
         txtJam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtJamActionPerformed(evt);
@@ -308,7 +329,7 @@ public class KendaraanMasuk extends javax.swing.JFrame {
     private void tbSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbSimpanActionPerformed
         // TODO add your handling code here:
         try{
-           conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","parkir","1234");
+           conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","Nailul","1234");
            str = (Statement)conn.createStatement();
            java.sql.PreparedStatement pstm = conn.prepareStatement("INSERT INTO data VALUES ('"+txtTiket.getText()+"','"+txtPlat.getText()+"','"+cbJenis.getSelectedItem()+"','"+txtTanggal.getText()+"','"+txtJam.getText()+"')");
            pstm.execute();
@@ -358,7 +379,7 @@ public class KendaraanMasuk extends javax.swing.JFrame {
     private void tbEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbEditActionPerformed
         // TODO add your handling code here:
         try{
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.56.1:1521:XE","parkir","1234");
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","Nailul","1234");
             str = (Statement)conn.createStatement();
             java.sql.PreparedStatement pstm = conn.prepareStatement("UPDATE data SET no_tiket='"+txtTiket.getText()+"',no_plat='"+txtPlat.getText()+"',jenis='"+cbJenis.getSelectedItem()+"',tgl_masuk='"+txtTanggal.getText()+"',jam_masuk='"+txtJam.getText()+"' WHERE no_tiket= '"+txtTiket.getText()+"'");
             pstm.execute();
