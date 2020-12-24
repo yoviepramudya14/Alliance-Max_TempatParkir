@@ -56,8 +56,8 @@
                           </Group>
                           <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="TanggalTM" min="-2" pref="139" max="-2" attributes="0"/>
-                              <Component id="JamMskTM" min="-2" pref="139" max="-2" attributes="0"/>
+                              <Component id="txttgl" min="-2" pref="139" max="-2" attributes="0"/>
+                              <Component id="txttime" min="-2" pref="139" max="-2" attributes="0"/>
                               <Component id="PlatTM" alignment="0" min="-2" pref="139" max="-2" attributes="0"/>
                               <Component id="NoTikTM" min="-2" pref="139" max="-2" attributes="0"/>
                           </Group>
@@ -108,12 +108,12 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
-                      <Component id="TanggalTM" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txttgl" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="JamMskTM" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txttime" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
@@ -171,9 +171,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlatTMActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="JamMskTM">
+        <Component class="javax.swing.JTextField" name="txttime">
         </Component>
-        <Component class="javax.swing.JTextField" name="TanggalTM">
+        <Component class="javax.swing.JTextField" name="txttgl">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
