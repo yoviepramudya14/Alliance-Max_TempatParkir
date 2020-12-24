@@ -40,23 +40,23 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
-                  <Component id="jTextField4" min="-2" pref="310" max="-2" attributes="0"/>
+                  <Component id="TxtUsername" min="-2" pref="310" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
-                  <Component id="jPasswordField1" min="-2" pref="310" max="-2" attributes="0"/>
+                  <Component id="PasswordFiled" min="-2" pref="310" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="190" pref="190" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="RegisterButton" min="-2" pref="100" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
-                  <Component id="jTextField1" min="-2" pref="310" max="-2" attributes="0"/>
+                  <Component id="TxtEmail" min="-2" pref="310" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="260" pref="260" max="-2" attributes="0"/>
-                  <Component id="jTextField3" min="-2" pref="140" max="-2" attributes="0"/>
+                  <Component id="TxtLastName" min="-2" pref="140" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="120" pref="120" max="-2" attributes="0"/>
@@ -65,7 +65,7 @@
               <Component id="jLabel8" min="-2" pref="480" max="-2" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
-                  <Component id="jTextField2" min="-2" pref="130" max="-2" attributes="0"/>
+                  <Component id="txtFisrtName" min="-2" pref="130" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -73,23 +73,23 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="260" pref="260" max="-2" attributes="0"/>
-                  <Component id="jTextField4" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="TxtUsername" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="360" pref="360" max="-2" attributes="0"/>
-                  <Component id="jPasswordField1" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="PasswordFiled" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="420" pref="420" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="RegisterButton" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="310" pref="310" max="-2" attributes="0"/>
-                  <Component id="jTextField1" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="TxtEmail" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
-                  <Component id="jTextField3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="TxtLastName" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
@@ -98,7 +98,7 @@
               <Component id="jLabel8" min="-2" pref="570" max="-2" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
-                  <Component id="jTextField2" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="txtFisrtName" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -115,7 +115,7 @@
             <Property name="text" type="java.lang.String" value="Alliance By-Space"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="TxtEmail">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
@@ -127,10 +127,10 @@
             <Property name="text" type="java.lang.String" value="Email Address"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtEmailActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField2">
+        <Component class="javax.swing.JTextField" name="txtFisrtName">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
@@ -142,10 +142,10 @@
             <Property name="text" type="java.lang.String" value="First Name"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFisrtNameActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="TxtLastName">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
@@ -157,10 +157,10 @@
             <Property name="text" type="java.lang.String" value="Last Name"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtLastNameActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+        <Component class="javax.swing.JPasswordField" name="PasswordFiled">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
@@ -169,10 +169,10 @@
             <Property name="text" type="java.lang.String" value="jPasswordField1"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordField1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PasswordFiledActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField4">
+        <Component class="javax.swing.JTextField" name="TxtUsername">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
@@ -184,10 +184,10 @@
             <Property name="text" type="java.lang.String" value="Username"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtUsernameActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="RegisterButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -198,7 +198,7 @@
             <Property name="text" type="java.lang.String" value="REGISTER"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegisterButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
