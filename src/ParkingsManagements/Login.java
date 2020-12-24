@@ -36,7 +36,7 @@ public class Login extends javax.swing.JFrame {
         Username = new javax.swing.JTextField();
         labeluser = new javax.swing.JLabel();
         labelpassword = new javax.swing.JLabel();
-        password = new javax.swing.JPasswordField();
+        sandi = new javax.swing.JPasswordField();
 
         jMenu1.setText("jMenu1");
 
@@ -65,8 +65,7 @@ public class Login extends javax.swing.JFrame {
 
         labelpassword.setText("Password");
 
-        password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        password.setText("jPasswordField1");
+        sandi.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -84,7 +83,7 @@ public class Login extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(Username, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
-                            .addComponent(password))))
+                            .addComponent(sandi))))
                 .addGap(60, 60, 60))
         );
         jPanel3Layout.setVerticalGroup(
@@ -98,7 +97,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(labeluser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sandi, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(109, 109, 109)
                 .addComponent(loginbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -183,6 +182,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel labelpassword;
     private javax.swing.JLabel labeluser;
     private javax.swing.JButton loginbutton;
-    private javax.swing.JPasswordField password;
+    private javax.swing.JPasswordField sandi;
     // End of variables declaration//GEN-END:variables
 }
