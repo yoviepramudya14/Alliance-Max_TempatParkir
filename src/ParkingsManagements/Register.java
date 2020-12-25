@@ -27,20 +27,27 @@ public class Register extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        labelAlliance = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
         TxtEmail = new javax.swing.JTextField();
         txtFisrtName = new javax.swing.JTextField();
         TxtLastName = new javax.swing.JTextField();
         PasswordFiled = new javax.swing.JPasswordField();
         TxtUsername = new javax.swing.JTextField();
         RegisterButton = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel3.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 204, 51));
-        jLabel3.setText("Alliance By-Space");
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        labelAlliance.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
+        labelAlliance.setForeground(new java.awt.Color(255, 204, 51));
+        labelAlliance.setText("Alliance By-Space");
+        jPanel3.add(labelAlliance, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 320, 70));
+
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/icons8_car_80px.png"))); // NOI18N
+        jPanel3.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 100, 70));
 
         TxtEmail.setBackground(new java.awt.Color(255, 204, 51));
         TxtEmail.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
@@ -51,6 +58,7 @@ public class Register extends javax.swing.JFrame {
                 TxtEmailActionPerformed(evt);
             }
         });
+        jPanel3.add(TxtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 310, 30));
 
         txtFisrtName.setBackground(new java.awt.Color(255, 204, 51));
         txtFisrtName.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
@@ -61,6 +69,7 @@ public class Register extends javax.swing.JFrame {
                 txtFisrtNameActionPerformed(evt);
             }
         });
+        jPanel3.add(txtFisrtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 130, 30));
 
         TxtLastName.setBackground(new java.awt.Color(255, 204, 51));
         TxtLastName.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
@@ -71,6 +80,7 @@ public class Register extends javax.swing.JFrame {
                 TxtLastNameActionPerformed(evt);
             }
         });
+        jPanel3.add(TxtLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 140, 30));
 
         PasswordFiled.setBackground(new java.awt.Color(255, 204, 51));
         PasswordFiled.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -80,6 +90,7 @@ public class Register extends javax.swing.JFrame {
                 PasswordFiledActionPerformed(evt);
             }
         });
+        jPanel3.add(PasswordFiled, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 310, 30));
 
         TxtUsername.setBackground(new java.awt.Color(255, 204, 51));
         TxtUsername.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
@@ -90,6 +101,7 @@ public class Register extends javax.swing.JFrame {
                 TxtUsernameActionPerformed(evt);
             }
         });
+        jPanel3.add(TxtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 310, 30));
 
         RegisterButton.setBackground(new java.awt.Color(255, 204, 102));
         RegisterButton.setForeground(new java.awt.Color(255, 204, 51));
@@ -99,59 +111,10 @@ public class Register extends javax.swing.JFrame {
                 RegisterButtonActionPerformed(evt);
             }
         });
+        jPanel3.add(RegisterButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 420, 100, 30));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(TxtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(PasswordFiled, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(RegisterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(TxtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(260, 260, 260)
-                .addComponent(TxtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(txtFisrtName, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(260, 260, 260)
-                .addComponent(TxtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(360, 360, 360)
-                .addComponent(PasswordFiled, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(420, 420, 420)
-                .addComponent(RegisterButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(310, 310, 310)
-                .addComponent(TxtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(TxtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 570, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(txtFisrtName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/WhatsApp Image 2020-12-21 at 2.20.41 PM.jpeg"))); // NOI18N
+        jPanel3.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 570));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -232,9 +195,10 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JTextField TxtEmail;
     private javax.swing.JTextField TxtLastName;
     private javax.swing.JTextField TxtUsername;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel background;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel labelAlliance;
+    private javax.swing.JLabel logo;
     private javax.swing.JTextField txtFisrtName;
     // End of variables declaration//GEN-END:variables
 
