@@ -5,6 +5,10 @@
  */
 package ParkingsManagements;
 
+import static ParkingsManagements.Konfigurasi.configDB;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 /**
@@ -62,6 +66,8 @@ public class Login extends javax.swing.JFrame {
         jPanel3.add(loginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 90, 30));
 
         Username.setBackground(new java.awt.Color(255, 204, 51));
+        Username.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UsernameActionPerformed(evt);
@@ -76,8 +82,8 @@ public class Login extends javax.swing.JFrame {
         jPanel3.add(labelpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 40, 27));
 
         Password.setBackground(new java.awt.Color(255, 204, 51));
+        Password.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Password.setText("jPasswordField1");
         jPanel3.add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 210, 40));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/icons8_car_80px.png"))); // NOI18N
@@ -102,19 +108,34 @@ public class Login extends javax.swing.JFrame {
 
     private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
         // TODO add your handling code here:
-        if (evt.getSource() == loginbutton){
-            String userText;
-            String pwdText;
-            userText = Username.getText();
-            pwdText = Password.getText();
-            if (userText.equalsIgnoreCase("Nailul") && pwdText.equalsIgnoreCase("12345")){
-                JOptionPane.showMessageDialog(this, "Login Successful");
-                Home hm = new Home();
-                hm.setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(this, "Invalid Username or Password");
+       String username = Username.getText();
+        String password = Password.getText();
+        
+        
+        try
+        {
+            int log = 1;
+            configDB();
+       Statement st = (Statement) configDB().createStatement();
+            ResultSet rs = st.executeQuery("select * from Registrations");
+            
+            while (rs.next())
+            {
+                if (rs.getString(1).equals(username)&& rs.getString(2).equals(password))
+                {
+                    log = 0 ;
+                    break ;
+                }
             }
-        }
+            if (log == 0)
+                JOptionPane.showMessageDialog(this, "Login Successful");
+                Home pk = new Home();
+                pk.setVisible(true);
+           
+            
+        } catch (SQLException ex) {
+        java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex); 
+    }
     }//GEN-LAST:event_loginbuttonActionPerformed
 
     private void UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameActionPerformed

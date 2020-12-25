@@ -6,6 +6,14 @@
 
 package ParkingsManagements;
 
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ASUS
@@ -152,6 +160,34 @@ public class Register extends javax.swing.JFrame {
 
     private void RegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterButtonActionPerformed
         // TODO add your handling code here:
+        String firstname = txtFisrtName.getText();
+        String lastname = TxtLastName.getText();
+        String username = TxtUsername.getText();
+        String email = TxtEmail.getText();
+        String password = PasswordFiled.getText();
+
+        //panggil koneksi
+        Connection connect = null;
+        try {
+            connect = Konfigurasi.configDB();
+        } catch (SQLException ex) {
+            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //query untuk memasukan data
+        String query = "INSERT INTO Registrations (firstname, lastname, username, email, password) "
+        + "VALUES ('"+firstname+"', '"+lastname+"','"+username+"', '"+email+"', '"+password+"')";
+
+        try{
+            //menyiapkan statement untuk di eksekusi
+            PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
+            ps.executeUpdate(query);
+            JOptionPane.showMessageDialog(null,"Data Berhasil Disimpan");
+
+        }catch(SQLException | HeadlessException e){
+            System.out.println(e);
+            JOptionPane.showMessageDialog(null,"Data Gagal Disimpan");
+
+        }
     }//GEN-LAST:event_RegisterButtonActionPerformed
 
     /**
