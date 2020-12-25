@@ -31,23 +31,28 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        labelAlliance = new javax.swing.JLabel();
         Login = new javax.swing.JPanel();
         masukbutton = new javax.swing.JButton();
         Signup = new javax.swing.JPanel();
         keluarbutton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         ExitButton = new javax.swing.JButton();
+        logo = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel3.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 204, 51));
-        jLabel3.setText("Alliance By-Space");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        labelAlliance.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
+        labelAlliance.setForeground(new java.awt.Color(255, 204, 51));
+        labelAlliance.setText("Alliance By-Space");
+        jPanel1.add(labelAlliance, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 320, 70));
 
         Login.setBackground(new java.awt.Color(255, 204, 51));
         Login.setForeground(new java.awt.Color(255, 204, 102));
 
+        masukbutton.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
         masukbutton.setText("Kendaraan Masuk");
         masukbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,22 +64,25 @@ public class Home extends javax.swing.JFrame {
         Login.setLayout(LoginLayout);
         LoginLayout.setHorizontalGroup(
             LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
-                .addComponent(masukbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+            .addGroup(LoginLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(masukbutton)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         LoginLayout.setVerticalGroup(
             LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LoginLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(masukbutton, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(masukbutton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        Signup.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 190, 50));
+
+        Signup.setBackground(new java.awt.Color(0, 0, 0));
         Signup.setForeground(new java.awt.Color(255, 204, 102));
 
+        keluarbutton.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
         keluarbutton.setText("Kendaraan Keluar");
         keluarbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,106 +95,72 @@ public class Home extends javax.swing.JFrame {
         SignupLayout.setHorizontalGroup(
             SignupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SignupLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(keluarbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addComponent(keluarbutton)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         SignupLayout.setVerticalGroup(
             SignupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SignupLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(keluarbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addComponent(keluarbutton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel1.add(Signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 190, 50));
+
+        ExitButton.setBackground(new java.awt.Color(255, 204, 51));
+        ExitButton.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
         ExitButton.setText("Exit");
         ExitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExitButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(ExitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 80, 30));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
-                .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(623, 623, 623))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(215, 215, 215)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Signup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86)
-                .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(Signup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(ExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 12, Short.MAX_VALUE))
-        );
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/icons8_car_80px.png"))); // NOI18N
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 90, 80));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/WhatsApp Image 2020-12-21 at 2.20.41 PM.jpeg"))); // NOI18N
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 570));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 455, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 408, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void masukbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masukbuttonActionPerformed
+    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
         // TODO add your handling code here:
-        KendaraanMasuk km = new KendaraanMasuk();
-        km.setVisible(true);
-    }//GEN-LAST:event_masukbuttonActionPerformed
+        frame = new JFrame ("Exit");
+        if (JOptionPane.YES_NO_OPTION!= JOptionPane.showConfirmDialog(frame,"Anda ingin keluar","parking area management",
+            JOptionPane.YES_NO_OPTION)) {
+        } else {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_ExitButtonActionPerformed
 
     private void keluarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarbuttonActionPerformed
         // TODO add your handling code here:
         KendaraanKeluar kk = new KendaraanKeluar();
         kk.setVisible(true);
     }//GEN-LAST:event_keluarbuttonActionPerformed
-    private JFrame frame;
-    private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
-        // TODO add your handling code here:
-        frame = new JFrame ("Exit");
-       if (JOptionPane.YES_NO_OPTION!= JOptionPane.showConfirmDialog(frame,"Anda ingin keluar","parking area management",
-               JOptionPane.YES_NO_OPTION)) {
-       } else {
-           System.exit(0);
-       }
-    }//GEN-LAST:event_ExitButtonActionPerformed
 
+    private void masukbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masukbuttonActionPerformed
+        // TODO add your handling code here:
+        KendaraanMasuk km = new KendaraanMasuk();
+        km.setVisible(true);
+    }//GEN-LAST:event_masukbuttonActionPerformed
+    private JFrame frame;
     /**
      * @param args the command line arguments
      */
@@ -226,10 +200,11 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton ExitButton;
     private javax.swing.JPanel Login;
     private javax.swing.JPanel Signup;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel background;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton keluarbutton;
+    private javax.swing.JLabel labelAlliance;
+    private javax.swing.JLabel logo;
     private javax.swing.JButton masukbutton;
     // End of variables declaration//GEN-END:variables
 }
