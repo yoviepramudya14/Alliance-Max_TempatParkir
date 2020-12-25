@@ -1,0 +1,9 @@
+untuk mengaktifkan registrations, harus membuat tabel Registrations terlebih dahulu
+Syntaxnya :
+CREATE TABLE REGISTRATIONS(
+Firstname Varchar2(35),
+Lastname Varchar2(35),
+username Varchar2(20),
+email Varchar2(30),
+password Varchar2(35)
+);
