@@ -38,6 +38,8 @@ public class Home extends javax.swing.JFrame {
         keluarbutton = new javax.swing.JButton();
         ExitButton = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
+        DataPtgs = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,7 +49,7 @@ public class Home extends javax.swing.JFrame {
         labelAlliance.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
         labelAlliance.setForeground(new java.awt.Color(255, 204, 51));
         labelAlliance.setText("Alliance By-Space");
-        jPanel1.add(labelAlliance, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 320, 70));
+        jPanel1.add(labelAlliance, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 320, 70));
 
         Login.setBackground(new java.awt.Color(255, 204, 51));
         Login.setForeground(new java.awt.Color(255, 204, 102));
@@ -65,21 +67,21 @@ public class Home extends javax.swing.JFrame {
         LoginLayout.setHorizontalGroup(
             LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LoginLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(24, 24, 24)
                 .addComponent(masukbutton)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         LoginLayout.setVerticalGroup(
             LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LoginLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LoginLayout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
                 .addComponent(masukbutton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        jPanel1.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 190, 50));
+        jPanel1.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 190, 50));
 
-        Signup.setBackground(new java.awt.Color(0, 0, 0));
+        Signup.setBackground(new java.awt.Color(255, 204, 51));
         Signup.setForeground(new java.awt.Color(255, 204, 102));
 
         keluarbutton.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
@@ -95,19 +97,19 @@ public class Home extends javax.swing.JFrame {
         SignupLayout.setHorizontalGroup(
             SignupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SignupLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(27, 27, 27)
                 .addComponent(keluarbutton)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         SignupLayout.setVerticalGroup(
             SignupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SignupLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(keluarbutton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel1.add(Signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 190, 50));
+        jPanel1.add(Signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 190, 50));
 
         ExitButton.setBackground(new java.awt.Color(255, 204, 51));
         ExitButton.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
@@ -117,23 +119,53 @@ public class Home extends javax.swing.JFrame {
                 ExitButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(ExitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 80, 30));
+        jPanel1.add(ExitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 80, 30));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/icons8_car_80px.png"))); // NOI18N
-        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 90, 80));
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 90, 80));
+
+        DataPtgs.setBackground(new java.awt.Color(0, 0, 0));
+
+        jButton1.setText("Data Petugas");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout DataPtgsLayout = new javax.swing.GroupLayout(DataPtgs);
+        DataPtgs.setLayout(DataPtgsLayout);
+        DataPtgsLayout.setHorizontalGroup(
+            DataPtgsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DataPtgsLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(jButton1)
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+        DataPtgsLayout.setVerticalGroup(
+            DataPtgsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DataPtgsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(DataPtgs, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 190, 50));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/WhatsApp Image 2020-12-21 at 2.20.41 PM.jpeg"))); // NOI18N
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 570));
+        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 400));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -160,6 +192,10 @@ public class Home extends javax.swing.JFrame {
         KendaraanMasuk km = new KendaraanMasuk();
         km.setVisible(true);
     }//GEN-LAST:event_masukbuttonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
     private JFrame frame;
     /**
      * @param args the command line arguments
@@ -197,10 +233,12 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel DataPtgs;
     private javax.swing.JButton ExitButton;
     private javax.swing.JPanel Login;
     private javax.swing.JPanel Signup;
     private javax.swing.JLabel background;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton keluarbutton;
     private javax.swing.JLabel labelAlliance;
