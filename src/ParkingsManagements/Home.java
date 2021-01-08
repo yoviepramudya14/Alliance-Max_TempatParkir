@@ -5,6 +5,9 @@
  */
 package ParkingsManagements;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -34,8 +37,6 @@ public class Home extends javax.swing.JFrame {
         labelAlliance = new javax.swing.JLabel();
         Login = new javax.swing.JPanel();
         masukbutton = new javax.swing.JButton();
-        Signup = new javax.swing.JPanel();
-        keluarbutton = new javax.swing.JButton();
         ExitButton = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
         DataPtgs = new javax.swing.JPanel();
@@ -79,37 +80,7 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 190, 50));
-
-        Signup.setBackground(new java.awt.Color(255, 204, 51));
-        Signup.setForeground(new java.awt.Color(255, 204, 102));
-
-        keluarbutton.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
-        keluarbutton.setText("Kendaraan Keluar");
-        keluarbutton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                keluarbuttonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout SignupLayout = new javax.swing.GroupLayout(Signup);
-        Signup.setLayout(SignupLayout);
-        SignupLayout.setHorizontalGroup(
-            SignupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SignupLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(keluarbutton)
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-        SignupLayout.setVerticalGroup(
-            SignupLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SignupLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(keluarbutton)
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(Signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 190, 50));
+        jPanel1.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 190, 50));
 
         ExitButton.setBackground(new java.awt.Color(255, 204, 51));
         ExitButton.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
@@ -126,6 +97,7 @@ public class Home extends javax.swing.JFrame {
 
         DataPtgs.setBackground(new java.awt.Color(0, 0, 0));
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setText("Data Petugas");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +112,7 @@ public class Home extends javax.swing.JFrame {
             .addGroup(DataPtgsLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(jButton1)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         DataPtgsLayout.setVerticalGroup(
             DataPtgsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,12 +153,6 @@ public class Home extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ExitButtonActionPerformed
 
-    private void keluarbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarbuttonActionPerformed
-        // TODO add your handling code here:
-        KendaraanKeluar kk = new KendaraanKeluar();
-        kk.setVisible(true);
-    }//GEN-LAST:event_keluarbuttonActionPerformed
-
     private void masukbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masukbuttonActionPerformed
         // TODO add your handling code here:
         KendaraanMasuk km = new KendaraanMasuk();
@@ -194,53 +160,25 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_masukbuttonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            new DataPetugas().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
     private JFrame frame;
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Home().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel DataPtgs;
     private javax.swing.JButton ExitButton;
     private javax.swing.JPanel Login;
-    private javax.swing.JPanel Signup;
     private javax.swing.JLabel background;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton keluarbutton;
     private javax.swing.JLabel labelAlliance;
     private javax.swing.JLabel logo;
     private javax.swing.JButton masukbutton;
