@@ -42,6 +42,7 @@ public class Login extends javax.swing.JFrame {
         labelpassword = new javax.swing.JLabel();
         Password = new javax.swing.JPasswordField();
         logo = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         jMenu1.setText("jMenu1");
@@ -53,7 +54,7 @@ public class Login extends javax.swing.JFrame {
         labelAlliance.setFont(new java.awt.Font("Book Antiqua", 1, 36)); // NOI18N
         labelAlliance.setForeground(new java.awt.Color(255, 204, 51));
         labelAlliance.setText("Alliance By-Space");
-        jPanel3.add(labelAlliance, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 320, 70));
+        jPanel3.add(labelAlliance, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 320, 70));
 
         loginbutton.setBackground(new java.awt.Color(255, 204, 51));
         loginbutton.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
@@ -63,7 +64,7 @@ public class Login extends javax.swing.JFrame {
                 loginbuttonActionPerformed(evt);
             }
         });
-        jPanel3.add(loginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 90, 30));
+        jPanel3.add(loginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, 100, 30));
 
         Username.setBackground(new java.awt.Color(255, 204, 51));
         Username.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -73,21 +74,31 @@ public class Login extends javax.swing.JFrame {
                 UsernameActionPerformed(evt);
             }
         });
-        jPanel3.add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 206, 38));
+        jPanel3.add(Username, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, 220, 38));
 
         labeluser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/icons8_male_user_30px_2.png"))); // NOI18N
-        jPanel3.add(labeluser, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 40, 40));
+        jPanel3.add(labeluser, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, 40, 40));
 
         labelpassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/icons8_password_30px_2.png"))); // NOI18N
-        jPanel3.add(labelpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 40, 27));
+        jPanel3.add(labelpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 40, 27));
 
         Password.setBackground(new java.awt.Color(255, 204, 51));
         Password.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel3.add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 210, 40));
+        jPanel3.add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 220, 40));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/icons8_car_80px.png"))); // NOI18N
-        jPanel3.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 90, 70));
+        jPanel3.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 90, 70));
+
+        jButton1.setBackground(new java.awt.Color(255, 204, 102));
+        jButton1.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
+        jButton1.setText("REGISTER");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 100, 30));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ParkingsManagements/gambar/WhatsApp Image 2020-12-21 at 2.20.41 PM.jpeg"))); // NOI18N
         jPanel3.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 610));
@@ -142,6 +153,10 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UsernameActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -181,6 +196,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Background;
     private javax.swing.JPasswordField Password;
     private javax.swing.JTextField Username;
+    private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel labelAlliance;
