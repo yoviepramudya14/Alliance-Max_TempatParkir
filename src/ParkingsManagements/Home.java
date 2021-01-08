@@ -56,7 +56,7 @@ public class Home extends javax.swing.JFrame {
         Login.setForeground(new java.awt.Color(255, 204, 102));
 
         masukbutton.setFont(new java.awt.Font("Rockwell", 1, 11)); // NOI18N
-        masukbutton.setText("Kendaraan Masuk");
+        masukbutton.setText("Kendaraan");
         masukbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 masukbuttonActionPerformed(evt);
@@ -68,9 +68,9 @@ public class Home extends javax.swing.JFrame {
         LoginLayout.setHorizontalGroup(
             LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LoginLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(42, 42, 42)
                 .addComponent(masukbutton)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         LoginLayout.setVerticalGroup(
             LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +155,7 @@ public class Home extends javax.swing.JFrame {
 
     private void masukbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_masukbuttonActionPerformed
         // TODO add your handling code here:
-        KendaraanMasuk km = new KendaraanMasuk();
+        Kendaraan km = new Kendaraan();
         km.setVisible(true);
     }//GEN-LAST:event_masukbuttonActionPerformed
 
