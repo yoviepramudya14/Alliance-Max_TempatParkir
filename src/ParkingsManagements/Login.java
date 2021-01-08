@@ -24,6 +24,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
     }
 
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -118,35 +119,27 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
-        // TODO add your handling code here:
-       String username = Username.getText();
-        String password = Password.getText();
-        
-        
-        try
-        {
-            int log = 1;
-            configDB();
-       Statement st = (Statement) configDB().createStatement();
-            ResultSet rs = st.executeQuery("select * from Registrations");
-            
-            while (rs.next())
-            {
-                if (rs.getString(1).equals(username)&& rs.getString(2).equals(password))
-                {
-                    log = 0 ;
-                    break ;
-                }
+
+        try{
+            if(Username.getText().equals("") || Password.getText().equals("")){
+                JOptionPane.showMessageDialog(this, "Data Tidak Boleh Kosong");
+                Username.requestFocus();
+            }else{
+                configDB();
+            Statement st = (Statement) configDB().createStatement();
+            String sql = ("SELECT * FROM Raegistrations WHERE username = '"+Username.getText()+"' AND Password ='"+String.valueOf(Password.getPassword())+"'");
+            ResultSet rs = st.executeQuery(sql);
+            if(rs.next()){
+                JOptionPane.showMessageDialog(this, "Login sucessfull!");
+                this.dispose();
+                new Home().setVisible(true);
+            }else{
+                JOptionPane.showMessageDialog(this, " Invalid Username or Password", "Pesan", JOptionPane.ERROR_MESSAGE);
             }
-            if (log == 0)
-                JOptionPane.showMessageDialog(this, "Login Successful");
-                Home pk = new Home();
-                pk.setVisible(true);
-           
-            
-        } catch (SQLException ex) {
-        java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex); 
-    }
+        }
+        }catch(Exception e){
+                e.printStackTrace();
+        }
     }//GEN-LAST:event_loginbuttonActionPerformed
 
     private void UsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameActionPerformed
@@ -155,7 +148,6 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new Register().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
