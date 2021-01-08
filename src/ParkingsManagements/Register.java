@@ -112,7 +112,7 @@ public class Register extends javax.swing.JFrame {
         jPanel3.add(TxtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 310, 30));
 
         RegisterButton.setBackground(new java.awt.Color(255, 204, 102));
-        RegisterButton.setForeground(new java.awt.Color(255, 204, 51));
+        RegisterButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         RegisterButton.setText("REGISTER");
         RegisterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,6 +182,7 @@ public class Register extends javax.swing.JFrame {
             PreparedStatement ps = (PreparedStatement) connect.prepareStatement(query);
             ps.executeUpdate(query);
             JOptionPane.showMessageDialog(null,"Data Berhasil Disimpan");
+            new Login().setVisible(true);
 
         }catch(SQLException | HeadlessException e){
             System.out.println(e);
@@ -190,7 +191,6 @@ public class Register extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_RegisterButtonActionPerformed
 
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField PasswordFiled;
